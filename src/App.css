@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap');
+
+body {
+  background: #191B20;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.main-bg {
+  min-height: 100vh;
+}
+
+.main-card {
+  background: transparent;
+  border-radius: 20px;
+}
+
+.left-card {
+  background: #23252C;
+  border-radius: 30px;
+  color: white;
+  padding: 30px !important;
+}
+
+/* search box start */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6C747D;
+}
+
+.search-box {
+  border-radius: 50px;
+  background-color: #CADACA;
+  border: none;
+  padding: 12px 12px 12px 40px;
+  color: #333;
+  font-weight: 500;
+}
+.search-box::placeholder {
+  color: #79867E;
+}
+.search-box:focus {
+  background-color: #CADACA;
+  outline: none;
+  box-shadow: none;
+}
+/* search box end */
+
+.main-weather {
+  margin-top: 20px;
+}
+
+.deg {
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.left-details {
+  font-size: 14px;
+  color: #b0b4ba;
+}
+.left-details i {
+  font-size: 18px;
+  color: #b0b4ba;
+}
+
+.weather-card2 {
+  background: #2D3039;
+  padding: 15px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+.weather-card2 .icon {
+  width: 30px;
+}
+
+.weather-card2 h6 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.weather-card2 small {
+  color: #b0b4ba;
+  font-size: 12px;
+}
+
+.icon {
+  width: 35px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.tabs span {
+  margin-right: 25px;
+  cursor: pointer;
+  color: #A0A5AF;
+}
+.tabs span.active {
+  color: white;
+  position: relative;
+}
+.tabs span.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  /* Simple wavy underline approximation */
+  background: radial-gradient(circle at 10px -5px, transparent 12px, white 13px) repeat-x;
+  background-size: 20px 20px;
+  background-position: 0 5px;
+}
+
+/* Cards */
+.weather-card {
+  background: #23252C !important;
+  padding: 20px 10px;
+  border-radius: 20px;
+  text-align: center;
+  height: 100%;
+  color: white;
+}
+.weather-card p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.weather-icon {
+  margin: 15px 0;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.overview-card, .graph-card, .sun-card {
+  background: #23252C !important;
+  padding: 25px;
+  border-radius: 25px;
+  color: white;
+  height: 100%;
+}
+
+.overview-card p {
+  color: #A0A5AF;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.overview-card h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.overview-card .status-text {
+  font-weight: 500;
+}
+
+.status-icon {
+  width: 45px;
+  height: auto;
+  align-self: flex-end;
+}
+
+.graph-card {
+  padding: 30px;
+}
+.precipitation-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sun-card p {
+  color: #A0A5AF;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.sun-icon {
+  width: 40px;
+}
+
+.sun-card h6 {
+  font-size: 16px;
+  margin-top: 2px;
+}
+.sun-card small {
+  color: #A0A5AF;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .left-card {
+    padding: 20px !important;
+  }
+  
+  .deg {
+    font-size: 70px;
+  }
+  
+  .deg span {
+    font-size: 30px !important;
+  }
+
+  .tabs {
+    font-size: 18px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .weather-card p {
+    font-size: 14px;
+  }
+
+  .overview-card, .graph-card, .sun-card {
+    padding: 20px;
+  }
+
+  .overview-card h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deg {
+    font-size: 60px;
+  }
+
+  .overview-card h2 {
+    font-size: 26px;
+  }
+  
+  .main-weather {
+    width: 150px;
+  }
+
+  .weather-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --- Premium Icon Gradients --- */
+.icon-gradient-sun {
+  background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-cloud-sun {
+  background: linear-gradient(135deg, #FFD700 0%, #A0C4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-cloud {
+  background: linear-gradient(135deg, #E0E5EC 0%, #A0A5AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-fog {
+  background: linear-gradient(135deg, #B0B4BA 0%, #6C747D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-rain {
+  background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-snow {
+  background: linear-gradient(135deg, #E0C3FC 0%, #8EC5FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-thunder {
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
